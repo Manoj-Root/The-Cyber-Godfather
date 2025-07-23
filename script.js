@@ -1,7 +1,7 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
-const letters = "01ﾊﾐﾑｱｳｴｵｶｷｸｹｺ01010101ｻｼｽｾ01010101010ｿﾀ101ﾂﾃﾄﾅﾆ010101ﾇﾈﾉAﾊﾋNﾌﾍﾎAﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
+const letters = "01ﾊﾐﾑｱｳｴAｵｶｷｸｹNｺ01A010G10H1ｻAｼｽIｾ010L10101010ｿOﾀ101ﾂﾃVﾄﾅﾆ01E0101ﾇYﾈﾉﾊﾋOﾌﾍﾎﾏUﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
 const fontSize = 16;
 canvas.style.opacity = '0.3';
 let columns;
