@@ -6,51 +6,22 @@
 <title>The Cyber Godfather | Manoj Kumar S</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 <style>
   html {
     scroll-behavior: smooth;
-  }
-  .active-link {
-    color: #fff !important;
-    font-weight: bold;
-  }
-  .toggle-btn {
-    display: none;
-    cursor: pointer;
-    color: white;
-    font-size: 1.5rem;
-    padding: 10px;
-  }
-  @media (max-width: 768px) {
-    .sidebar {
-      display: none;
-    }
-    .sidebar.show {
-      display: flex;
-      position: absolute;
-      z-index: 1000;
-    }
-    .toggle-btn {
-      display: block;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 1100;
-    }
   }
 </style>
 </head>
 <body>
 <canvas id="matrixCanvas"></canvas>
-<div class="toggle-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')" aria-label="Toggle Navigation" role="button" tabindex="0">
-  <i class="fas fa-bars"></i>
-</div>
+
 <div class="toggle-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')">
   <i class="fas fa-bars"></i>
 </div>
+
 <div class="sidebar" aria-label="Main Navigation">
   <h2 class="brand-title">The <span>Cyber</span> Godfather</h2>
   <p class="tagline">Securing the Digital Underworld</p>
@@ -65,9 +36,10 @@
 
 <div class="main">
   <section id="home" class="section" data-aos="fade-up">
-    <img src="images/profile-pic.jpeg" alt="Portrait of Manoj Kumar S" class="rounded-circle mb-3" style="width:250px;height:250px;" loading="lazy">
+    <img src="images/profile-pic.jpeg" alt="Portrait of Manoj Kumar S" class="rounded-circle mb-4" style="width:280px;height:280px;object-fit:cover;" loading="lazy">
     <h1>Manoj Kumar S</h1>
-    <p>I'm a Cybersecurity Professional, Penetration Tester & Security Analyst</p>
+    <p>Cybersecurity Professional • Penetration Tester • Security Analyst<br>
+    <span style="color: var(--accent); font-weight: 600;">Defending the Digital Frontier</span></p>
     <div class="social-icons">
       <a href="https://linkedin.com/in/manoj-root" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/Manoj-Root" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
@@ -78,17 +50,17 @@
   <section id="about" class="section" data-aos="fade-up">
   <h1>About Me</h1>
   <div class="about-me-container">
-    <div class="about-me-card blur-background">
-      <h2 style="color: #00cc66; text-align:center; margin-bottom:20px;">Cybersecurity with a Purpose</h2>
+    <div class="about-me-card">
+      <h2>Cybersecurity with a Purpose</h2>
       <p><strong>Hello! I'm Manoj Kumar S</strong>, a final-year B.E. Cybersecurity student with a deep passion for protecting both <strong>digital infrastructures</strong> and <strong>industrial environments</strong>. My journey blends a hacker’s mindset with a defender’s discipline.</p>
 
       <p>I specialize in <strong>penetration testing</strong>, <strong>digital forensics</strong>, <strong>OT/ICS security</strong>, and <strong>network hardening</strong>. Armed with certifications like <em>CEH, WAPT, NPT, CCNA, and Python</em>, I’ve engaged in everything from real-world cyberattacks to academic research and competitive hacking.</p>
 
-      <p>Notably, I’ve been <span style="color:#cc3333;font-weight:bold;">recognized</span> by the Government of India for disclosing critical vulnerabilities, <span style="color:#cc3333;font-weight:bold;">featured in Inflectra's Hall of Fame</span>, and celebrated as a <strong>3× CTF champion</strong> and <strong>Hackathon finalist</strong> at IISc.</p>
+      <p>Notably, I've been <span style="color:var(--accent);font-weight:bold;">recognized</span> by the Government of India for disclosing critical vulnerabilities, <span style="color:var(--accent);font-weight:bold;">featured in Inflectra's Hall of Fame</span>, and celebrated as a <strong>3× CTF champion</strong> and <strong>Hackathon finalist</strong> at IISc.</p>
 
       <p>I also enjoy sharing knowledge — whether through public speaking, running workshops, or contributing tools like my custom network mapper <em>PortXplorer</em>.</p>
 
-      <div class="highlight-box" style="margin-top:20px; padding: 15px; border-left: 4px solid var(--primary); background: rgba(0, 0, 0, 0.5);">
+      <div class="highlight-box">
         <em>“My mission is to build safer digital ecosystems and resilient industrial networks.”</em>
       </div>
 
@@ -96,7 +68,6 @@
     </div>
   </div>
 </section>
-
 
   <section id="services" class="section" data-aos="fade-up">
   <h1>Services</h1>
@@ -133,7 +104,6 @@
     </div>
   </div>
 </section>
-
 
   <section id="experience" class="section" data-aos="fade-up">
     <h1>Experience</h1>
@@ -183,50 +153,126 @@
     <h1>Blog</h1>
     <p>Coming soon: insights and articles on cybersecurity topics and case studies.</p>
   </section>
-
   <section id="contact" class="section" data-aos="fade-up">
     <h1>Contact Me</h1>
     <div class="contact-container">
       <div class="contact-info">
-        <p>Feel free to reach out for collaborations, or just a chat about cybersecurity!</p>
+        <h3 style="color: var(--primary); margin-bottom: 20px;">Let's Connect</h3>
+        <p>Ready to collaborate on cybersecurity projects or discuss the latest security trends? I'm always excited to connect with fellow professionals and organizations looking to strengthen their security posture.</p>
         <p><i class="fas fa-envelope"></i> <a href="mailto:manojkumar.root@gmail.com">manojkumar.root@gmail.com</a></p>
         <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/manoj-root" target="_blank">LinkedIn Profile</a></p>
         <p><i class="fab fa-github"></i> <a href="https://github.com/Manoj-Root" target="_blank">GitHub Profile</a></p>
       </div>
       <form class="contact-form" action="https://formspree.io/f/mzzvevjv" method="POST">
+        <h3 style="color: var(--primary); margin-bottom: 20px; text-align: center;">Send a Message</h3>
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+        <button type="submit">
+          <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>
+          Send Message
+        </button>
       </form>
     </div>
   </section>
 </div>
 
 <script>
+// Enhanced navigation with smooth scrolling
 const sections = document.querySelectorAll(".section");
 const navLinks = document.querySelectorAll(".sidebar .nav-link");
 
+// Add smooth scrolling to navigation links
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    // Close mobile menu if open
+    document.querySelector('.sidebar').classList.remove('show');
+  });
+});
+
+// Enhanced scroll spy with intersection observer
+const observerOptions = {
+  threshold: 0.3,
+  rootMargin: '-20% 0px -20% 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.remove('active-link');
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active-link');
+        }
+      });
+    }
+  });
+}, observerOptions);
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+// Legacy scroll spy as fallback
 window.addEventListener("scroll", () => {
   let current = "";
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 100) {
+    if (scrollY >= sectionTop - 200) {
       current = section.getAttribute("id");
     }
   });
-  navLinks.forEach(link => {
-    link.classList.remove("active-link");
-    if (link.getAttribute("href").includes(current)) {
-      link.classList.add("active-link");
-    }
-  });
+  if (current) {
+    navLinks.forEach(link => {
+      link.classList.remove("active-link");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active-link");
+      }
+    });
+  }
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
+
+// Enhanced mobile menu toggle
+function toggleMobileMenu() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('show');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  const sidebar = document.querySelector('.sidebar');
+  const toggleBtn = document.querySelector('.toggle-btn');
+  
+  if (!sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+    sidebar.classList.remove('show');
+  }
 });
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+    duration: 800,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 100
+  });
 </script>
 <script src="script.js"></script>
 </body>
