@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Godfather | Manoj Kumar S</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .active-link {
+    color: #fff !important;
+    font-weight: bold;
+  }
+  .toggle-btn {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .sidebar.show {
+      display: flex;
+      position: absolute;
+      z-index: 1000;
+    }
+    .toggle-btn {
+      display: block;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1100;
+    }
+  }
+</style>
+</head>
+<body>
+<canvas id="matrixCanvas"></canvas>
+<div class="toggle-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')" aria-label="Toggle Navigation" role="button" tabindex="0">
+  <i class="fas fa-bars"></i>
+</div>
+<div class="toggle-btn" onclick="document.querySelector('.sidebar').classList.toggle('show')">
+  <i class="fas fa-bars"></i>
+</div>
+<div class="sidebar" aria-label="Main Navigation">
+  <h2 class="brand-title">The <span>Cyber</span> Godfather</h2>
+  <p class="tagline">Securing the Digital Underworld</p>
+  <a href="#home" class="nav-link" aria-label="Home Section"><i class="fas fa-home me-2"></i>Home</a>
+  <a href="#about" class="nav-link" aria-label="About Section"><i class="fas fa-user me-2"></i>About</a>
+  <a href="#services" class="nav-link" aria-label="Services Section"><i class="fas fa-briefcase me-2"></i>Services</a>
+  <a href="#experience" class="nav-link" aria-label="Experience Section"><i class="fas fa-tasks me-2"></i>Experience</a>
+  <a href="#works" class="nav-link" aria-label="Works Section"><i class="fas fa-layer-group me-2"></i>Works</a>
+  <a href="#blog" class="nav-link" aria-label="Blog Section"><i class="fas fa-book-open me-2"></i>Blog</a>
+  <a href="#contact" class="nav-link" aria-label="Contact Section"><i class="fas fa-envelope me-2"></i>Contact</a>
+</div>
+
+<div class="main">
+  <section id="home" class="section" data-aos="fade-up">
+    <img src="images/profile-pic.jpeg" alt="Portrait of Manoj Kumar S" class="rounded-circle mb-3" style="width:250px;height:250px;" loading="lazy">
+    <h1>Manoj Kumar S</h1>
+    <p>I'm a Cybersecurity Professional, Penetration Tester & Security Analyst</p>
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/manoj-root" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Manoj-Root" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+      <a href="mailto:manojkumar.root@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <section id="about" class="section" data-aos="fade-up">
+  <h1>About Me</h1>
+  <div class="about-me-container">
+    <div class="about-me-card blur-background">
+      <h2 style="color: #00cc66; text-align:center; margin-bottom:20px;">Cybersecurity with a Purpose</h2>
+      <p><strong>Hello! I'm Manoj Kumar S</strong>, a final-year B.E. Cybersecurity student with a deep passion for protecting both <strong>digital infrastructures</strong> and <strong>industrial environments</strong>. My journey blends a hacker’s mindset with a defender’s discipline.</p>
+
+      <p>I specialize in <strong>penetration testing</strong>, <strong>digital forensics</strong>, <strong>OT/ICS security</strong>, and <strong>network hardening</strong>. Armed with certifications like <em>CEH, WAPT, NPT, CCNA, and Python</em>, I’ve engaged in everything from real-world cyberattacks to academic research and competitive hacking.</p>
+
+      <p>Notably, I’ve been <span style="color:#cc3333;font-weight:bold;">recognized</span> by the Government of India for disclosing critical vulnerabilities, <span style="color:#cc3333;font-weight:bold;">featured in Inflectra's Hall of Fame</span>, and celebrated as a <strong>3× CTF champion</strong> and <strong>Hackathon finalist</strong> at IISc.</p>
+
+      <p>I also enjoy sharing knowledge — whether through public speaking, running workshops, or contributing tools like my custom network mapper <em>PortXplorer</em>.</p>
+
+      <div class="highlight-box" style="margin-top:20px; padding: 15px; border-left: 4px solid var(--primary); background: rgba(0, 0, 0, 0.5);">
+        <em>“My mission is to build safer digital ecosystems and resilient industrial networks.”</em>
+      </div>
+
+      <p style="margin-top:20px">If you're looking for someone who thrives on solving complex security challenges and making real-world impact — <strong>let’s connect</strong>.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="services" class="section" data-aos="fade-up">
+  <h1>Services</h1>
+  <div class="services-container">
+    <div class="service-card" data-aos="zoom-in">
+      <img src="images/penetration-testing.avif" alt="Penetration Testing Icon" loading="lazy">
+      <h3>Penetration Testing</h3>
+      <p>I perform professional penetration testing to identify loopholes in the organization's infrastructure.</p>
+    </div>
+    <div class="service-card" data-aos="zoom-in">
+      <img src="images/VA.png" alt="Vulnerability Assessment Icon" loading="lazy">
+      <h3>Vulnerability Assessment</h3>
+      <p>Identifying early and malicious security flaws in the infrastructure.</p>
+    </div>
+    <div class="service-card" data-aos="zoom-in">
+      <img src="images/NS.jpg" alt="Network Setup Icon" loading="lazy">
+      <h3>Network Setup</h3>
+      <p>Designing and implementing secure and efficient network infrastructure for organizations.</p>
+    </div>
+    <div class="service-card" data-aos="zoom-in">
+      <img src="images/STD.jpg" alt="Security Tool Development" loading="lazy">
+      <h3>Security Tool Development</h3>
+      <p>Building custom tools for scanning, monitoring, and automation — like my project <strong>PortXplorer</strong>.</p>
+    </div>
+    <div class="service-card" data-aos="zoom-in">
+      <img src="images/ST.webp" alt="Security Awareness Training" loading="lazy">
+      <h3>Corporate Security Awareness Training</h3>
+      <p>Empowering teams with hands-on workshops to recognize phishing, secure credentials, and respond to threats.</p>
+    </div>
+    <div class="service-card" data-aos="zoom-in">
+      <img src="images/DF.webp" alt="Digital Forensics" loading="lazy">
+      <h3>Digital Forensics</h3>
+      <p>Recovering evidence and tracing cyber incidents through forensic investigation and malware analysis.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="experience" class="section" data-aos="fade-up">
+    <h1>Experience</h1>
+    <div class="experience-container">
+      <div class="experience-card" data-aos="fade-right">
+        <h4>2025</h4>
+        <h3>Resource Person - Akash Institute of Engineering and Technology</h3>
+        <p>Delivered hands-on training on ethical hacking and network security to 20+ students. Designed labs covering key cybersecurity tools and techniques.</p>
+      </div>
+      <div class="experience-card" data-aos="fade-right">
+        <h4>Sep 2024 – Dec 2024</h4>
+        <h3>Cybersecurity Intern - Supraja Technology</h3>
+        <p>Conducted vulnerability assessments and penetration tests. Documented findings and suggested mitigations.</p>
+      </div>
+      <div class="experience-card" data-aos="fade-right">
+        <h4>Sep 2022 – Present</h4>
+        <h3>Freelance Bug Bounty Hunter</h3>
+        <p>Disclosed vulnerabilities to platforms. Featured in Hall of Fame and received appreciation from the Indian government.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="works" class="section" data-aos="fade-up">
+  <h1>Works & Projects</h1>
+  <div class="experience-container">
+    <div class="experience-card" data-aos="flip-left">
+      <h3>ICS Cybersecurity Lab</h3>
+      <p>Designed and built a simulated Industrial Control System (ICS) environment integrating SCADA, PLCs, and industrial protocols. Used for demonstrating attack vectors and defense mechanisms in OT systems.</p>
+    </div>
+    <div class="experience-card" data-aos="flip-left">
+      <h3>Digital Forensics Investigation</h3>
+      <p>Led forensic analysis on compromised systems. Recovered deleted files, analyzed logs, and traced threat actor behavior to produce court-admissible reports and mitigation plans.</p>
+    </div>
+    <div class="experience-card" data-aos="flip-left">
+      <h3>PortXplorer - Network Mapping Tool</h3>
+      <p>Developed a Python-based port and service scanner with GUI for network inventory tracking. Integrated real-time visualization of discovered hosts and services with vulnerability lookup capabilities.</p>
+    </div>
+    <div class="experience-card" data-aos="flip-left">
+      <h3>IoT & OT Security Research</h3>
+      <p>Performed penetration testing and reverse engineering of IoT devices (CCTV, SCADA gateways). Published findings with CVE references and contributed to community-driven OT security hardening guides.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="blog" class="section" data-aos="fade-up">
+    <h1>Blog</h1>
+    <p>Coming soon: insights and articles on cybersecurity topics and case studies.</p>
+  </section>
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h1>Contact Me</h1>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p>Feel free to reach out for collaborations, or just a chat about cybersecurity!</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:manojkumar.root@gmail.com">manojkumar.root@gmail.com</a></p>
+        <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/manoj-root" target="_blank">LinkedIn Profile</a></p>
+        <p><i class="fab fa-github"></i> <a href="https://github.com/Manoj-Root" target="_blank">GitHub Profile</a></p>
+      </div>
+      <form class="contact-form" action="https://formspree.io/f/mzzvevjv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<script>
+const sections = document.querySelectorAll(".section");
+const navLinks = document.querySelectorAll(".sidebar .nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 100) {
+      current = section.getAttribute("id");
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove("active-link");
+    if (link.getAttribute("href").includes(current)) {
+      link.classList.add("active-link");
+    }
+  });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="script.js"></script>
+</body>
+</html>
