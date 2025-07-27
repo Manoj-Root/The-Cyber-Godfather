@@ -14,32 +14,6 @@
   --glow-accent: 0 0 20px rgba(0, 255, 153, 0.3);
 }
 
-.view-project-link {
-  display: inline-block;
-  margin-top: 5px;
-  color: #007acc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.view-project-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.view-project-link {
-  display: inline-block;
-  margin-top: 5px;
-  color: #007acc;
-  text-decoration: none;
-  font-weight: bold;
-}
-.view-project-link:hover {
-  text-decoration: underline;
-}
-
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -322,6 +296,31 @@ body {
   z-index: -1;
 }
 
+.view-project-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+.view-project-link:hover {
+  text-decoration: underline;
+}
+
+.view-project-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-project-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
 
 
 .social-icons a:hover {
@@ -329,6 +328,13 @@ body {
   transform: translateY(-5px) scale(1.1);
   
 }
+
+.experience-card h3 a:hover {
+  text-decoration: underline;
+  color: #007acc; /* Optional: add a link color on hover */
+  cursor: pointer;
+}
+
 
 
 /* About Section Enhancement */
