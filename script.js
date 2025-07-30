@@ -33,8 +33,8 @@ function draw() {
     const colorIndex = Math.random() < 0.7 ? 0 : Math.floor(Math.random() * colors.length);
     ctx.fillStyle = colors[colorIndex];
 
-    // Draw square boxes occasionally
-    if (Math.random() < 0.1) {
+    // Draw square boxes more frequently in the stream
+    if (Math.random() < 0.3) {
       ctx.fillRect(x, y - fontSize, fontSize - 2, fontSize - 2);
     } else {
       ctx.fillText(text, x, y);
