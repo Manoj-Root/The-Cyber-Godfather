@@ -1,8 +1,9 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
-const letters = "01ﾊﾐﾑｱｳｴAｵｶｷｸｹNｺ01A010G10H1ｻAｼｽIｾ010L10101010ｿOﾀ101ﾂﾃVﾄﾅﾆ01E0101ﾇYﾈﾉﾊﾋOﾌﾍﾎﾏUﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ■□▪▫";
-const fontSize = 20;
+const letters = "01ﾊﾐﾑｱｳｴｵｶｷｸｹｺ01010101ｻｼｽｾ01010101010ｿﾀ101ﾂﾃﾄﾅﾆ010101ﾇﾈﾉAﾊﾋNﾌﾍﾎAﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
+const fontSize = 16;
+canvas.style.opacity = '0.3';
 let columns;
 let drops = [];
 let colors = ['#00ff88', '#ff4466', '#00ccff', '#ffaa00'];
@@ -21,7 +22,7 @@ function init() {
 
 function draw() {
   // Semi-transparent black background for fade effect
-  ctx.fillStyle = "rgba(0, 0, 0, 0.12)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   for (let i = 0; i < drops.length; i++) {
@@ -33,12 +34,7 @@ function draw() {
     const colorIndex = Math.random() < 0.7 ? 0 : Math.floor(Math.random() * colors.length);
     ctx.fillStyle = colors[colorIndex];
 
-    // Draw square boxes more frequently in the stream
-    if (Math.random() < 0.3) {
-      ctx.fillRect(x, y - fontSize, fontSize - 2, fontSize - 2);
-    } else {
-      ctx.fillText(text, x, y);
-    }
+    ctx.fillText(text, x, y);
 
     if (y > canvas.height && Math.random() > 0.98) {
       drops[i] = 0;
@@ -58,24 +54,4 @@ window.addEventListener("resize", () => {
 // Initialize & start
 init();
 draw();
-
-// Live Clock Function
-function updateClock() {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes().toString().padStart(2, '0');
-  const seconds = now.getSeconds().toString().padStart(2, '0');
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  const displayHours = (hours % 12 || 12).toString().padStart(2, '0');
-  
-  const timeString = `${displayHours}:${minutes}:${seconds} ${ampm}`;
-  const clockElement = document.getElementById('liveClock');
-  if (clockElement) {
-    clockElement.textContent = timeString;
-  }
-}
-
-// Update clock every second
-setInterval(updateClock, 1000);
-updateClock(); // Initial call
 
