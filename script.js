@@ -1,9 +1,8 @@
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
-const letters = "01ﾊﾐﾑｱｳｴAｵｶｷｸｹNｺ01A010G10H1ｻAｼｽIｾ010L10101010ｿOﾀ101ﾂﾃVﾄﾅﾆ01E0101ﾇYﾈﾉﾊﾋOﾌﾍﾎﾏUﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ";
-const fontSize = 16;
-canvas.style.opacity = '0.3';
+const letters = "01ﾊﾐﾑｱｳｴAｵｶｷｸｹNｺ01A010G10H1ｻAｼｽIｾ010L10101010ｿOﾀ101ﾂﾃVﾄﾅﾆ01E0101ﾇYﾈﾉﾊﾋOﾌﾍﾎﾏUﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ■□▪▫";
+const fontSize = 20;
 let columns;
 let drops = [];
 let colors = ['#00ff88', '#ff4466', '#00ccff', '#ffaa00'];
@@ -22,7 +21,7 @@ function init() {
 
 function draw() {
   // Semi-transparent black background for fade effect
-  ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+  ctx.fillStyle = "rgba(0, 0, 0, 0.12)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   for (let i = 0; i < drops.length; i++) {
@@ -34,7 +33,12 @@ function draw() {
     const colorIndex = Math.random() < 0.7 ? 0 : Math.floor(Math.random() * colors.length);
     ctx.fillStyle = colors[colorIndex];
 
-    ctx.fillText(text, x, y);
+    // Draw square boxes occasionally
+    if (Math.random() < 0.1) {
+      ctx.fillRect(x, y - fontSize, fontSize - 2, fontSize - 2);
+    } else {
+      ctx.fillText(text, x, y);
+    }
 
     if (y > canvas.height && Math.random() > 0.98) {
       drops[i] = 0;
