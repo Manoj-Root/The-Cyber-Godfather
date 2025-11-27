@@ -1,3 +1,13 @@
+const scrollBox = document.querySelector('.feedback-scroll');
+
+scrollBox.addEventListener('mouseenter', () => {
+  scrollBox.style.animationPlayState = 'paused';
+});
+
+scrollBox.addEventListener('mouseleave', () => {
+  scrollBox.style.animationPlayState = 'running';
+});
+
 const canvas = document.getElementById("matrixCanvas");
 const ctx = canvas.getContext("2d");
 
