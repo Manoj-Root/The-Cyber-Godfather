@@ -16,7 +16,7 @@
 .feedback-scroll {
   display: inline-flex;
   gap: 40px;
-  animation: scroll-left 55s linear infinite; /* PERFECT SPEED */
+  animation: scroll-left 40s linear infinite; /* PERFECT SPEED */
 }
 
 /* Feedback card styling */
